@@ -1,0 +1,110 @@
+/* ============================================================
+   PINK PANTHER PORTFOLIO — responsive.css
+   Tablet (≤ 900px) and mobile (≤ 560px) breakpoints
+   ============================================================ */
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+
+  /* Nav */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: min(300px, 80vw);
+    background: var(--bg-card);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 2rem;
+    box-shadow: -8px 0 40px rgba(0,0,0,0.12);
+    transition: right 0.4s var(--ease-paint);
+    z-index: 7500;
+  }
+
+  .nav-links.open { right: 0; }
+
+  .nav-link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.75rem 0.5rem;
+    width: 100%;
+  }
+
+  .nav-hamburger { display: flex; }
+
+  /* Home */
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .home-visual {
+    order: -1;
+    justify-content: center;
+  }
+
+  .home-avatar-wrap {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-desc { margin-left: auto; margin-right: auto; }
+
+  .home-actions { justify-content: center; }
+
+  .home-tags { justify-content: center; }
+
+  .home-eyebrow { justify-content: center; }
+
+  .home-floating-badge.badge-top  { left: 0; }
+  .home-floating-badge.badge-bottom { right: 0; }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-image-wrap { max-width: 380px; margin: 0 auto; }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Skills / Portfolio */
+  .skill-cols { grid-template-columns: repeat(2, 1fr); }
+  .grid-projects { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 560px) {
+
+  .wrap { padding: 0 20px; }
+  .section { padding: 90px 0; }
+
+  .nav-inner { padding: 14px 20px; }
+  .brand { font-size: 14px; }
+
+  .home-grid { padding-top: 90px; gap: 40px; }
+  .home-avatar-wrap { width: 220px; height: 220px; }
+  .home-actions { flex-direction: column; align-items: stretch; }
+  .home-actions .btn { justify-content: center; }
+  .home-floating-badge { display: none; }
+
+  .about-image-frame { font-size: 40px; }
+
+  .skill-cols { grid-template-columns: 1fr; }
+
+  .grid-projects { grid-template-columns: 1fr; }
+
+  .contact-form { padding: 24px; }
+
+  #pp-speech-bubble { display: none; }
+  #back-to-top { left: 1rem; bottom: 1rem; width: 44px; height: 44px; }
+}

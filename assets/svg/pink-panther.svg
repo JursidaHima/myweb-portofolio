@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" id="pp-svg">
+  <defs>
+    <style>
+      .pp-body    { fill: #FF6B9D; }
+      .pp-dark    { fill: #E0396B; }
+      .pp-light   { fill: #FFB3CC; }
+      .pp-white   { fill: #FFFFFF; }
+      .pp-black   { fill: #1A1A2E; }
+      .pp-nose    { fill: #FF2D78; }
+      .pp-mouth   { fill: none; stroke: #1A1A2E; stroke-width: 1.5; stroke-linecap: round; }
+      .pp-outline { fill: none; stroke: #E0396B; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- ── Tail ── -->
+  <path class="pp-body" d="M82 148 Q105 155 112 140 Q118 126 104 120 Q96 117 90 128 Q86 138 82 148Z"/>
+  <path class="pp-dark" d="M104 120 Q112 118 112 130 Q112 142 104 145" stroke="#E0396B" stroke-width="1" fill="none"/>
+
+  <!-- ── Left leg ── -->
+  <path class="pp-body" d="M48 150 Q42 165 40 178 Q39 185 46 185 Q52 185 53 177 Q54 168 55 158Z"/>
+  <!-- Left foot -->
+  <ellipse class="pp-dark" cx="43" cy="186" rx="10" ry="5" transform="rotate(-8 43 186)"/>
+
+  <!-- ── Right leg ── -->
+  <path class="pp-body" d="M68 150 Q72 165 74 178 Q75 185 68 185 Q62 185 62 177 Q61 168 62 158Z"/>
+  <!-- Right foot -->
+  <ellipse class="pp-dark" cx="71" cy="186" rx="10" ry="5" transform="rotate(8 71 186)"/>
+
+  <!-- ── Body ── -->
+  <ellipse class="pp-body" cx="60" cy="130" rx="26" ry="32"/>
+  <!-- belly sheen -->
+  <ellipse class="pp-light" cx="56" cy="122" rx="10" ry="14" opacity="0.45"/>
+
+  <!-- ── Left arm ── -->
+  <path class="pp-body" d="M34 118 Q22 124 18 136 Q16 144 24 146 Q30 147 35 138 Q40 128 40 120Z"/>
+  <!-- Left hand / paw -->
+  <circle class="pp-dark" cx="21" cy="146" r="7"/>
+  <circle class="pp-light" cx="19" cy="144" r="3" opacity="0.5"/>
+
+  <!-- ── Right arm ── -->
+  <path class="pp-body" d="M86 118 Q98 124 102 136 Q104 144 96 146 Q90 147 85 138 Q80 128 80 120Z"/>
+  <!-- Right hand / paw (holding paintbrush) -->
+  <circle class="pp-dark" cx="99" cy="146" r="7"/>
+  <!-- Paintbrush -->
+  <rect class="pp-black" x="99" y="130" width="3" height="22" rx="1.5" transform="rotate(30 99 130)"/>
+  <ellipse fill="#FFD700" cx="108" cy="123" rx="4" ry="2.5" transform="rotate(30 108 123)"/>
+  <path fill="#FF6B9D" d="M104 128 Q108 122 112 120 Q110 126 106 130Z"/>
+
+  <!-- ── Neck ── -->
+  <rect class="pp-body" x="52" y="90" width="16" height="14" rx="6"/>
+
+  <!-- ── Head ── -->
+  <ellipse class="pp-body" cx="60" cy="72" rx="28" ry="30"/>
+
+  <!-- ── Ears ── -->
+  <!-- Left ear -->
+  <ellipse class="pp-body" cx="36" cy="48" rx="9" ry="13" transform="rotate(-18 36 48)"/>
+  <ellipse class="pp-dark"  cx="36" cy="49" rx="5" ry="8"  transform="rotate(-18 36 49)"/>
+  <!-- Right ear -->
+  <ellipse class="pp-body" cx="84" cy="48" rx="9" ry="13" transform="rotate(18 84 48)"/>
+  <ellipse class="pp-dark"  cx="84" cy="49" rx="5" ry="8"  transform="rotate(18 84 49)"/>
+
+  <!-- ── Face ── -->
+  <!-- Snout -->
+  <ellipse class="pp-light" cx="60" cy="80" rx="13" ry="10"/>
+
+  <!-- Eyes -->
+  <ellipse class="pp-white" cx="48" cy="66" rx="9"  ry="10"/>
+  <ellipse class="pp-white" cx="72" cy="66" rx="9"  ry="10"/>
+  <!-- Irises -->
+  <circle  fill="#1A6EFF"  cx="50" cy="68" r="6"/>
+  <circle  fill="#1A6EFF"  cx="74" cy="68" r="6"/>
+  <!-- Pupils -->
+  <circle  class="pp-black" cx="51" cy="69" r="3.5"/>
+  <circle  class="pp-black" cx="75" cy="69" r="3.5"/>
+  <!-- Eye shine -->
+  <circle  class="pp-white" cx="52" cy="67" r="1.5"/>
+  <circle  class="pp-white" cx="76" cy="67" r="1.5"/>
+
+  <!-- Brow lines -->
+  <path class="pp-dark" d="M41 58 Q48 54 55 57" stroke="#E0396B" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path class="pp-dark" d="M65 57 Q72 54 79 58" stroke="#E0396B" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <ellipse class="pp-nose" cx="60" cy="77" rx="4" ry="3"/>
+  <!-- Nostrils -->
+  <ellipse class="pp-dark" cx="58" cy="78" rx="1.2" ry="0.9"/>
+  <ellipse class="pp-dark" cx="62" cy="78" rx="1.2" ry="0.9"/>
+
+  <!-- Mouth -->
+  <path class="pp-mouth" d="M54 84 Q60 90 66 84"/>
+  <!-- Cheek whiskers -->
+  <line stroke="#E0396B" stroke-width="1" stroke-linecap="round" x1="34" y1="78" x2="50" y2="80"/>
+  <line stroke="#E0396B" stroke-width="1" stroke-linecap="round" x1="34" y1="82" x2="50" y2="83"/>
+  <line stroke="#E0396B" stroke-width="1" stroke-linecap="round" x1="70" y1="80" x2="86" y2="78"/>
+  <line stroke="#E0396B" stroke-width="1" stroke-linecap="round" x1="70" y1="83" x2="86" y2="82"/>
+
+  <!-- ── Paint drip on brush tip ── -->
+  <path fill="#FF6B9D" d="M108 120 Q109 116 110 114 Q111 116 110 120Z" opacity="0.8"/>
+</svg>
