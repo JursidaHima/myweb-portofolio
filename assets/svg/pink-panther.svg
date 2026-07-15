@@ -39,12 +39,19 @@
 
   <!-- ── Right arm ── -->
   <path class="pp-body" d="M86 118 Q98 124 102 136 Q104 144 96 146 Q90 147 85 138 Q80 128 80 120Z"/>
-  <!-- Right hand / paw (holding paintbrush) -->
+  <!-- Right hand / paw (holding laptop) -->
   <circle class="pp-dark" cx="99" cy="146" r="7"/>
-  <!-- Paintbrush -->
-  <rect class="pp-black" x="99" y="130" width="3" height="22" rx="1.5" transform="rotate(30 99 130)"/>
-  <ellipse fill="#FFD700" cx="108" cy="123" rx="4" ry="2.5" transform="rotate(30 108 123)"/>
-  <path fill="#FF6B9D" d="M104 128 Q108 122 112 120 Q110 126 106 130Z"/>
+  <!-- Laptop -->
+  <g transform="translate(90,118) rotate(-10 11 10)">
+    <!-- screen -->
+    <rect class="pp-black" x="0" y="0" width="24" height="16" rx="2"/>
+    <rect fill="#7FD8FF" x="2.2" y="2.2" width="19.6" height="11.6" rx="1"/>
+    <line x1="4" y1="6" x2="16" y2="6" stroke="#1A1A2E" stroke-width="1" opacity="0.35"/>
+    <line x1="4" y1="9" x2="12" y2="9" stroke="#1A1A2E" stroke-width="1" opacity="0.35"/>
+    <!-- keyboard base -->
+    <path class="pp-dark" d="M-4 16 L28 16 L32 22 L-8 22 Z"/>
+    <rect fill="#FFB3CC" x="-1" y="17.5" width="26" height="1.6" rx="0.8" opacity="0.6"/>
+  </g>
 
   <!-- ── Neck ── -->
   <rect class="pp-body" x="52" y="90" width="16" height="14" rx="6"/>
@@ -95,6 +102,6 @@
   <line stroke="#E0396B" stroke-width="1" stroke-linecap="round" x1="70" y1="80" x2="86" y2="78"/>
   <line stroke="#E0396B" stroke-width="1" stroke-linecap="round" x1="70" y1="83" x2="86" y2="82"/>
 
-  <!-- ── Paint drip on brush tip ── -->
-  <path fill="#FF6B9D" d="M108 120 Q109 116 110 114 Q111 116 110 120Z" opacity="0.8"/>
+  <!-- ── keyboard glow accent ── -->
+  <ellipse fill="#7FD8FF" cx="102" cy="117" rx="3" ry="1.6" opacity="0.5"/>
 </svg>

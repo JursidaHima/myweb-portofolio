@@ -25,8 +25,6 @@
     ppBubble: document.getElementById('pp-speech-bubble'),
     ppBubbleText: document.querySelector('#pp-speech-bubble p'),
     paintOverlay: document.getElementById('paint-overlay'),
-    themeToggle: document.getElementById('theme-toggle'),
-    soundToggle: document.getElementById('sound-toggle'),
     cursorDot: document.getElementById('cursor-dot'),
     cursorRing: document.getElementById('cursor-ring'),
     backToTop: document.getElementById('back-to-top'),
@@ -58,14 +56,15 @@
   /* ── Custom cursor ── */
   function initCursor() {
     if (!DOM.cursorDot || !DOM.cursorRing || window.matchMedia('(hover: none)').matches) return;
-    var ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+    var ringX = 0, ringY = 0, mouseX = 0, mouseY = 0, primed = false;
     window.addEventListener('mousemove', function (e) {
       mouseX = e.clientX; mouseY = e.clientY;
+      if (!primed) { ringX = mouseX; ringY = mouseY; primed = true; }
       DOM.cursorDot.style.transform = 'translate(' + mouseX + 'px,' + mouseY + 'px) translate(-50%,-50%)';
     });
     (function loop() {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
+      ringX += (mouseX - ringX) * 0.28;
+      ringY += (mouseY - ringY) * 0.28;
       DOM.cursorRing.style.transform = 'translate(' + ringX + 'px,' + ringY + 'px) translate(-50%,-50%)';
       requestAnimationFrame(loop);
     })();
@@ -97,25 +96,6 @@
     state.bubbleTimer = setTimeout(function () { DOM.ppBubble.classList.remove('show'); }, ms || 2400);
   }
 
-  /* ── Theme toggle ── */
-  function initTheme() {
-    if (!DOM.themeToggle) return;
-    DOM.themeToggle.addEventListener('click', function () {
-      var dark = DOM.body.classList.toggle('theme-dark');
-      DOM.body.classList.toggle('theme-light', !dark);
-      ppSay(dark ? 'Ooh, moody!' : 'Back to daylight!', 1800);
-    });
-  }
-
-  /* ── Sound toggle (visual only — no audio asset shipped) ── */
-  function initSound() {
-    if (!DOM.soundToggle) return;
-    DOM.soundToggle.addEventListener('click', function () {
-      state.soundOn = !state.soundOn;
-      DOM.soundToggle.setAttribute('aria-pressed', String(state.soundOn));
-      DOM.soundToggle.style.borderColor = state.soundOn ? 'var(--pp-pink)' : '';
-    });
-  }
 
   /* ── Paint-wipe overlay + navigation ── */
   function paintWipeTo(targetId) {
@@ -269,8 +249,6 @@
   document.addEventListener('DOMContentLoaded', function () {
     initLoader();
     initCursor();
-    initTheme();
-    initSound();
     initNavigation();
     initScroll();
     initProjectHover();
