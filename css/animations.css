@@ -6,22 +6,16 @@
 /* ── Pink Panther character states ── */
 #pp-character { transform-origin: bottom center; }
 
-/* Idle: gentle bob + tail sway */
+/* Idle: gentle bob (the pink glow that used to animate alongside this via
+   ppTailSway's drop-shadow has been removed per feedback) */
 .pp-idle {
-  animation:
-    ppBob 2.8s ease-in-out infinite,
-    ppTailSway 2s ease-in-out infinite 0.4s;
+  animation: ppBob 2.8s ease-in-out infinite;
 }
 
 @keyframes ppBob {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   30%       { transform: translateY(-6px) rotate(1.5deg); }
   60%       { transform: translateY(-3px) rotate(-1deg); }
-}
-
-@keyframes ppTailSway {
-  0%, 100% { filter: drop-shadow(0 8px 20px rgba(255,107,157,0.35)); }
-  50%       { filter: drop-shadow(4px 10px 24px rgba(255,107,157,0.5)); }
 }
 
 /* Walk: horizontal shuffle + bounce */

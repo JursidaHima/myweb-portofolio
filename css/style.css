@@ -60,6 +60,10 @@ img, svg { display: block; max-width: 100%; }
 
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
 .section { padding: 130px 0; position: relative; }
+/* Home has its own full-height layout (below) so it shouldn't stack the
+   generic section padding on top of it — that combination was pushing the
+   hero content far down the page and leaving a big empty gap under the nav. */
+#home.section { padding: 0; }
 .section-head { text-align: center; max-width: 620px; margin: 0 auto 60px; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -159,7 +163,7 @@ body.theme-dark #main-nav { background: rgba(21,19,26,0.75); }
 .nav-overlay.visible { opacity: 1; pointer-events: auto; }
 
 /* ── Home / hero ── */
-.home-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 60px; min-height: 100vh; padding-top: 110px; }
+.home-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 60px; min-height: calc(100vh - 90px); padding-top: 90px; }
 .home-eyebrow { display: inline-flex; }
 .home-title { font-family: var(--font-head); font-weight: 700; font-size: clamp(2.6rem, 5.4vw, 4.4rem); line-height: 1.05; margin: 6px 0 18px; }
 .home-title .accent { color: #E0396B; }
