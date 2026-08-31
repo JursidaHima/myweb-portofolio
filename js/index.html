@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Jursida Hima — Portfolio</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +11,6 @@
       rel="stylesheet"
     />
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -35,7 +33,6 @@
       >Skip to content</a
     >
 
-    <!--  Loading screen  -->
     <div id="loading-screen">
       <h1 class="loader-title">
         <span style="animation-delay: 0.05s">J</span
@@ -49,11 +46,6 @@
       <div class="loader-bar-track"><div class="loader-bar"></div></div>
     </div>
 
-    <!--  Custom cursor  -->
-    <!-- <div id="cursor-dot" aria-hidden="true"></div>
-<div id="cursor-ring" aria-hidden="true"></div> -->
-
-    <!--  Paint wipe overlay (plays on nav navigation)  -->
     <div id="paint-overlay" aria-hidden="true">
       <svg viewBox="0 0 400 800" preserveAspectRatio="none">
         <defs>
@@ -70,7 +62,6 @@
       </svg>
     </div>
 
-    <!--  Nav  -->
     <header id="main-nav">
       <div class="nav-inner">
         <a href="#home" class="brand" data-section="home">
@@ -87,9 +78,7 @@
           <li>
             <a href="#home" class="nav-link active" data-section="home">Home</a>
           </li>
-          <li>
-            <a href="#about" class="nav-link" data-section="about">About</a>
-          </li>
+
           <li>
             <a href="#skills" class="nav-link" data-section="skills">Skills</a>
           </li>
@@ -97,6 +86,9 @@
             <a href="#portfolio" class="nav-link" data-section="portfolio"
               >Work</a
             >
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
           </li>
           <li>
             <a href="#contact" class="nav-link" data-section="contact"
@@ -119,7 +111,6 @@
     </header>
 
     <main>
-      <!--  Home  -->
       <section id="home" class="section">
         <div class="wrap home-grid">
           <div class="home-copy">
@@ -160,69 +151,6 @@
         </div>
       </section>
 
-      <!--  About  -->
-      <section id="about" class="section">
-        <div class="wrap">
-          <div class="section-head" data-reveal>
-            <span class="eyebrow">Curator's note</span>
-            <h2>About</h2>
-          </div>
-          <div class="about-grid">
-            <div class="about-image-wrap" data-reveal>
-              <div class="about-image-splash" aria-hidden="true"></div>
-              <div class="about-image-frame">
-                <img
-                  src="assets/images/profile.jpg"
-                  alt="Jursida Hima"
-                  style="
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: inherit;
-                  "
-                />
-              </div>
-            </div>
-            <div class="about-copy" data-reveal>
-              <p>
-                I'm a <strong>full-stack developer</strong> who works across the
-                entire product — from interface design down to the database.
-                Most of what I build starts as a "what if": what if getting
-                dressed came with a weather forecast, what if a scheduling
-                headache could just disappear. I follow those questions all the
-                way to a finished, production-ready build.
-              </p>
-              <p>
-                My background spans
-                <strong
-                  >front-end and back-end development, database design,
-                  application security, and full-stack project delivery</strong
-                >, paired with formal training in
-                <strong
-                  >interaction design, usability, and product management</strong
-                >
-                — so I design with the same rigor I code with. An application
-                should feel obvious to use before it feels impressive.
-              </p>
-              <p>
-                Outside of that I'm usually planning a hike or a trip, and yes,
-                a certain pink, paint-loving panther has appointed himself
-                creative director of this page.
-              </p>
-              <ul class="about-list">
-                <li>Full-Stack Web Development</li>
-                <li>Interaction &amp; UX Design</li>
-                <li>Database Design</li>
-                <li>Security &amp; Usability</li>
-                <li>Product Management</li>
-                <li>Professional Practice</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--  Skills  -->
       <section id="skills" class="section">
         <div class="wrap">
           <div class="section-head" data-reveal>
@@ -262,7 +190,6 @@
         </div>
       </section>
 
-      <!--  Portfolio  -->
       <section id="portfolio" class="section">
         <div class="wrap">
           <div class="section-head" data-reveal>
@@ -503,7 +430,67 @@
         </div>
       </section>
 
-      <!--  Contact  -->
+      <section id="about" class="section">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">Curator's note</span>
+            <h2>About</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-image-wrap" data-reveal>
+              <div class="about-image-splash" aria-hidden="true"></div>
+              <div class="about-image-frame">
+                <img
+                  src="assets/images/profile.jpg"
+                  alt="Jursida Hima"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: inherit;
+                  "
+                />
+              </div>
+            </div>
+            <div class="about-copy" data-reveal>
+              <p>
+                I'm a <strong>full-stack developer</strong> who works across the
+                entire product — from interface design down to the database.
+                Most of what I build starts as a "what if": what if getting
+                dressed came with a weather forecast, what if a scheduling
+                headache could just disappear. I follow those questions all the
+                way to a finished, production-ready build.
+              </p>
+              <p>
+                My background spans
+                <strong
+                  >front-end and back-end development, database design,
+                  application security, and full-stack project delivery</strong
+                >, paired with formal training in
+                <strong
+                  >interaction design, usability, and product management</strong
+                >
+                — so I design with the same rigor I code with. An application
+                should feel obvious to use before it feels impressive.
+              </p>
+              <p>
+                Outside of that I'm usually planning a hike or a trip, and yes,
+                a certain pink, paint-loving panther has appointed himself
+                creative director of this page.
+              </p>
+              <ul class="about-list">
+                <li>Full-Stack Web Development</li>
+                <li>Interaction &amp; UX Design</li>
+                <li>Database Design</li>
+                <li>Security &amp; Usability</li>
+                <li>Product Management</li>
+                <li>Professional Practice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section">
         <div class="wrap">
           <div class="section-head" data-reveal>
