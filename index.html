@@ -1,278 +1,568 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Jursida Hima — Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jursida Hima — Portfolio</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body class="theme-light" data-active-section="home">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body class="theme-light" data-active-section="home">
+    <a
+      href="#home"
+      class="skip-link"
+      style="
+        position: absolute;
+        left: -999px;
+        top: 0;
+        z-index: 9999;
+        background: #ff6b9d;
+        color: #fff;
+        padding: 12px 18px;
+        font-family: &quot;Inter&quot;, sans-serif;
+        font-size: 13px;
+      "
+      >Skip to content</a
+    >
 
-<a href="#home" class="skip-link" style="position:absolute; left:-999px; top:0; z-index:9999; background:#FF6B9D; color:#fff; padding:12px 18px; font-family:'Inter',sans-serif; font-size:13px;">Skip to content</a>
-
-<!--  Loading screen  -->
-<div id="loading-screen">
-  <h1 class="loader-title">
-    <span style="animation-delay:.05s">J</span><span style="animation-delay:.1s">u</span><span style="animation-delay:.15s">r</span><span style="animation-delay:.2s">s</span><span style="animation-delay:.25s">i</span><span style="animation-delay:.3s">d</span><span style="animation-delay:.35s">a</span>
-  </h1>
-  <div class="loader-bar-track"><div class="loader-bar"></div></div>
-</div>
-
-<!--  Custom cursor  -->
-<!-- <div id="cursor-dot" aria-hidden="true"></div>
-<div id="cursor-ring" aria-hidden="true"></div> -->
-
-<!--  Paint wipe overlay (plays on nav navigation)  -->
-<div id="paint-overlay" aria-hidden="true">
-  <svg viewBox="0 0 400 800" preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="ppOverlayGrad" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#E0396B"/>
-        <stop offset="45%" stop-color="#FF6B9D"/>
-        <stop offset="100%" stop-color="#FFB3CC"/>
-      </linearGradient>
-    </defs>
-    <path class="plate" d="M0,0 L370,0 L400,30 L378,60 L400,95 L382,140 L400,190 L385,240 L400,300 L388,360 L400,420 L384,480 L400,540 L390,600 L400,660 L382,720 L400,760 L400,800 L0,800 Z"/>
-  </svg>
-</div>
-
-<!--  Nav  -->
-<header id="main-nav">
-  <div class="nav-inner">
-    <a href="#home" class="brand" data-section="home">
-      <img src="assets/svg/cat-logo.svg" alt="Half rose, half black cat logo" />
-      <span class="brand-name" style="color:#E0396B" >JURSIDA <span style="color: black;">HIMA</span></span>
-    </a>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-      <li><a href="#portfolio" class="nav-link" data-section="portfolio">Work</a></li>
-      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-utils">
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <div id="loading-screen">
+      <h1 class="loader-title">
+        <span style="animation-delay: 0.05s">J</span
+        ><span style="animation-delay: 0.1s">u</span
+        ><span style="animation-delay: 0.15s">r</span
+        ><span style="animation-delay: 0.2s">s</span
+        ><span style="animation-delay: 0.25s">i</span
+        ><span style="animation-delay: 0.3s">d</span
+        ><span style="animation-delay: 0.35s">a</span>
+      </h1>
+      <div class="loader-bar-track"><div class="loader-bar"></div></div>
     </div>
-  </div>
-</header>
 
-<main>
-
-  <!--  Home  -->
-  <section id="home" class="section">
-    <div class="wrap home-grid">
-      <div class="home-copy">
-        <span class="eyebrow home-eyebrow">Full Stack Developer</span>
-        <h1 class="home-title">Building new experiences with <span class="accent">creativity</span>.</h1>
-        <p class="home-role">Interaction &amp; clean code</p>
-        <p class="home-desc">Hi, I'm Jursida — a full-stack developer who follows every "what if" all the way to a finished interface, with a real backend behind it when the idea calls me.</p>
-        <div class="home-actions">
-          <a href="#portfolio" class="btn btn-primary" data-section="portfolio">View Work</a>
-          <a href="#contact" class="btn btn-outline" data-section="contact">Contact Me</a>
-        </div>
-      </div>
-
-      <div class="home-visual">
-        <div class="home-avatar-wrap">
-          <img id="pp-character" class="pp-img pp-idle" src="assets/svg/pink-panther.svg" alt="Illustrated cat mascot, holding a laptop" />
-        </div>
-      </div>
+    <div id="paint-overlay" aria-hidden="true">
+      <svg viewBox="0 0 400 800" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="ppOverlayGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#E0396B" />
+            <stop offset="45%" stop-color="#FF6B9D" />
+            <stop offset="100%" stop-color="#FFB3CC" />
+          </linearGradient>
+        </defs>
+        <path
+          class="plate"
+          d="M0,0 L370,0 L400,30 L378,60 L400,95 L382,140 L400,190 L385,240 L400,300 L388,360 L400,420 L384,480 L400,540 L390,600 L400,660 L382,720 L400,760 L400,800 L0,800 Z"
+        />
+      </svg>
     </div>
-  </section>
 
-  <!--  About  -->
-  <section id="about" class="section">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Curator's note</span>
-        <h2>About</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-image-wrap" data-reveal>
-          <div class="about-image-splash" aria-hidden="true"></div>
-          <div class="about-image-frame"><img src="assets/images/profile.jpg" alt="Jursida Hima" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" /></div>
-        </div>
-        <div class="about-copy" data-reveal>
-          <p>I'm a <strong>full-stack developer</strong> who works across the entire product — from interface design down to the database. Most of what I build starts as a "what if": what if getting dressed came with a weather forecast, what if a scheduling headache could just disappear. I follow those questions all the way to a finished, production-ready build.</p>
-          <p>My background spans <strong>front-end and back-end development, database design, application security, and full-stack project delivery</strong>, paired with formal training in <strong>interaction design, usability, and product management</strong> — so I design with the same rigor I code with. An application should feel obvious to use before it feels impressive.</p>
-          <p>Outside of that I'm usually planning a hike or a trip, and yes, a certain pink, paint-loving panther has appointed himself creative director of this page.</p>
-          <ul class="about-list">
-            <li>Full-Stack Web Development</li>
-            <li>Interaction &amp; UX Design</li>
-            <li>Database Design</li>
-            <li>Security &amp; Usability</li>
-            <li>Product Management</li>
-            <li>Professional Practice</li>
-          </ul>
-       
-      </div>
-    </div>
-  </section>
+    <header id="main-nav">
+      <div class="nav-inner">
+        <a href="#home" class="brand" data-section="home">
+          <img
+            src="assets/svg/cat-logo.svg"
+            alt="Half rose, half black cat logo"
+          />
+          <span class="brand-name" style="color: #e0396b"
+            >JURSIDA <span style="color: black">HIMA</span></span
+          >
+        </a>
 
-  <!--  Skills  -->
-  <section id="skills" class="section">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Materials on hand</span>
-        <h2>Skills</h2>
-      </div>
-      <div class="skill-cols" data-reveal>
-        <div class="skill-cat">
-          <h3>Front-End</h3>
-          <div class="skill-card">HTML5</div>
-          <div class="skill-card">CSS3</div>
-          <div class="skill-card">JavaScript</div>
-          <div class="skill-card">Bootstrap</div>
-        </div>
-        <div class="skill-cat">
-          <h3>Back-End</h3>
-          <div class="skill-card">PHP</div>
-          <div class="skill-card">ASP.NET MVC</div>
-          <div class="skill-card">C#</div>
-          <div class="skill-card">MySQL</div>
-        </div>
-        <div class="skill-cat">
-          <h3>Design &amp; UX</h3>
-          <div class="skill-card">Figma</div>
-          <div class="skill-card">Interaction Design</div>
-          <div class="skill-card">Usability</div>
-          <div class="skill-card">Responsive Design</div>
-        </div>
-        <div class="skill-cat">
-          <h3>Practice</h3>
-          <div class="skill-card">Full-Stack Delivery</div>
-          <div class="skill-card">App Security</div>
-          <div class="skill-card">Product Management</div>
-          <div class="skill-card">Git &amp; GitHub</div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <ul class="nav-links" id="nav-links">
+          <li>
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+          </li>
 
-  <!--  Portfolio  -->
-  <section id="portfolio" class="section">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Selected work</span>
-        <h2>Work</h2>
-        <p>My creations now live in existence, leaving room for what's next.</p>
-      </div>
-      <div class="grid-projects" data-reveal>
+          <li>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link" data-section="portfolio"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
 
-        <div class="project-card">
-          <span class="project-index">01</span>
-          <div class="project-thumb">CI</div>
-          <div class="project-info">
-            <h3>Comf-i Virtual Wardrobe</h3>
-            <p>A virtual wardrobe that lets you mix and match real clothing pieces and preview outfits based on the day's weather.</p>
-            <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="nav-utils">
+          <button
+            class="nav-hamburger"
+            id="nav-hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="section">
+        <div class="wrap home-grid">
+          <div class="home-copy">
+            <span class="eyebrow home-eyebrow">Full Stack Developer</span>
+            <h1 class="home-title">
+              Building new experiences with
+              <span class="accent">creativity</span>.
+            </h1>
+            <p class="home-role">Interaction &amp; clean code</p>
+            <p class="home-desc">
+              Hi, I'm Jursida — a full-stack developer who follows every "what
+              if" all the way to a finished interface, with a real backend
+              behind it when the idea calls me.
+            </p>
+            <div class="home-actions">
+              <a
+                href="#portfolio"
+                class="btn btn-primary"
+                data-section="portfolio"
+                >View Work</a
+              >
+              <a href="#contact" class="btn btn-outline" data-section="contact"
+                >Contact Me</a
+              >
+            </div>
           </div>
-          <a class="project-link" href="https://jursidahima.github.io/Comf-i/" target="_blank" rel="noopener">View Project →</a>
-        </div>
 
-        <div class="project-card">
-          <span class="project-index">02</span>
-          <div class="project-thumb">IL</div>
-          <div class="project-info">
-            <h3>Optical Illusion Lab</h3>
-            <p>An interactive gallery of visual illusions — drift effects, afterimages, and moving patterns — with a quiz to test how easily your eyes get fooled.</p>
-            <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          </div>
-          <a class="project-link" href="https://jursidahima.github.io/optical-illusion/" target="_blank" rel="noopener">View Project →</a>
-        </div>
-
-        <div class="project-card">
-          <span class="project-index">03</span>
-          <div class="project-thumb">MS</div>
-          <div class="project-info">
-            <h3>Morse Sentence Symphony</h3>
-            <p>Type any sentence and hear it played back instantly as Morse code audio, with adjustable speed and pitch.</p>
-            <div class="tag-row"><span>JavaScript</span><span>Web Audio API</span><span>HTML/CSS</span></div>
-          </div>
-          <a class="project-link" href="https://jursidahima.github.io/morse-symphony/" target="_blank" rel="noopener">View Project →</a>
-        </div>
-
-        <div class="project-card">
-          <span class="project-index">04</span>
-          <div class="project-thumb">BM</div>
-          <div class="project-info">
-            <h3>Bad Motivation Generator</h3>
-            <p>A tongue-in-cheek generator that serves up deliberately terrible AI "advice," complete with shareable cards and a community hall of shame.</p>
-            <div class="tag-row"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
-          </div>
-          <a class="project-link" href="https://jursidahima.github.io/Bad-Motivation-Generator/" target="_blank" rel="noopener">View Project →</a>
-        </div>
-
-        <div class="project-card">
-          <span class="project-index">05</span>
-          <div class="project-thumb">RD</div>
-          <div class="project-info">
-            <h3>Real Deal Admin Dashboard</h3>
-            <p>A full-stack real estate admin panel deployed on Render for managing records and day-to-day operations from a single dashboard.</p>
-            <div class="tag-row"><span>Full-Stack</span><span>Database</span><span>Deployed on Render</span></div>
-          </div>
-          <a class="project-link" href="https://real-deal-admin.onrender.com/" target="_blank" rel="noopener">View Project →</a>
-        </div>
-
-        <div class="project-soon"><span class="plus">+</span><span>Coming Soon</span></div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--  Contact  -->
-  <section id="contact" class="section">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Inquiries</span>
-        <h2>Have a project in mind? Let's build it.</h2>
-      </div>
-      <div class="contact-grid" data-reveal>
-        <div>
-     
-          <div class="contact-links">
-            <a href="mailto:jursidahima@gmail.com">✉ jursidahima@gmail.com</a>
-            <a href="https://www.linkedin.com/in/jursida-hima-0a38a23a5/" target="_blank" rel="noopener">in LinkedIn</a>
-            <a href="https://github.com/JursidaHima" target="_blank" rel="noopener">⌥ GitHub</a>
-            <!-- Point this at your actual resume file -->
-            <!-- <a href="#" download>⭳ Download Resume</a> -->
+          <div class="home-visual">
+            <div class="home-avatar-wrap">
+              <img
+                id="pp-character"
+                class="pp-img pp-idle"
+                src="assets/svg/pink-panther.svg"
+                alt="Illustrated cat mascot, holding a laptop"
+              />
+            </div>
           </div>
         </div>
-        <form class="contact-form" id="contact-form">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
-          <textarea name="message" placeholder="What are we building?" required></textarea>
-          <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
-          <span class="form-note" id="form-note">Message received — I'll get back to you soon.</span>
-        </form>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">Materials on hand</span>
+            <h2>Skills</h2>
+          </div>
+          <div class="skill-cols" data-reveal>
+            <div class="skill-cat">
+              <h3>Front-End</h3>
+              <div class="skill-card">HTML5</div>
+              <div class="skill-card">CSS3</div>
+              <div class="skill-card">JavaScript</div>
+              <div class="skill-card">Bootstrap</div>
+            </div>
+            <div class="skill-cat">
+              <h3>Back-End</h3>
+              <div class="skill-card">PHP</div>
+              <div class="skill-card">ASP.NET MVC</div>
+              <div class="skill-card">C#</div>
+              <div class="skill-card">MySQL</div>
+            </div>
+            <div class="skill-cat">
+              <h3>Design &amp; UX</h3>
+              <div class="skill-card">Figma</div>
+              <div class="skill-card">Interaction Design</div>
+              <div class="skill-card">Usability</div>
+              <div class="skill-card">Responsive Design</div>
+            </div>
+            <div class="skill-cat">
+              <h3>Practice</h3>
+              <div class="skill-card">Full-Stack Delivery</div>
+              <div class="skill-card">App Security</div>
+              <div class="skill-card">Product Management</div>
+              <div class="skill-card">Git &amp; GitHub</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">Selected work</span>
+            <h2>Work</h2>
+            <p>
+              My creations now live in existence, leaving room for what's next.
+            </p>
+          </div>
+          <div class="grid-projects" data-reveal>
+            <div class="project-card">
+              <span class="project-index">01</span>
+              <div class="project-thumb">CI</div>
+              <div class="project-info">
+                <h3>Comf-i Virtual Wardrobe</h3>
+                <p>
+                  A virtual wardrobe that lets you mix and match real clothing
+                  pieces and preview outfits based on the day's weather.
+                </p>
+                <div class="tag-row">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://jursidahima.github.io/Comf-i/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">02</span>
+              <div class="project-thumb">IL</div>
+              <div class="project-info">
+                <h3>Optical Illusion Lab</h3>
+                <p>
+                  An interactive gallery of visual illusions — drift effects,
+                  afterimages, and moving patterns — with a quiz to test how
+                  easily your eyes get fooled.
+                </p>
+                <div class="tag-row">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://jursidahima.github.io/optical-illusion/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">03</span>
+              <div class="project-thumb">CP</div>
+              <div class="project-info">
+                <h3>CupidPro</h3>
+                <p>
+                  A career and job search web application integrating external
+                  APIs to streamline professional networking and opportunities.
+                </p>
+                <div class="tag-row">
+                  <span>Express.js</span><span>Pug</span><span>APIs</span
+                  ><span>Render</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://cupidpro.onrender.com/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">04</span>
+              <div class="project-thumb">BS</div>
+              <div class="project-info">
+                <h3>BankOnSecure</h3>
+                <p>
+                  A secure online banking application focused on user session
+                  safety, secure data handling, and reliable core transaction
+                  features.
+                </p>
+                <div class="tag-row">
+                  <span>PHP</span><span>Security</span><span>Backend</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://bankonsecure.infy.click/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">05</span>
+              <div class="project-thumb">GM</div>
+              <div class="project-info">
+                <h3>GA(IN)-ME Board Game Tracker</h3>
+                <p>
+                  A board game collection tracking web app allowing users to
+                  filter game categories, save personal collections, and post
+                  community reviews.
+                </p>
+                <div class="tag-row">
+                  <span>PHP</span><span>MySQL</span><span>Database</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://gainme.my-board.org/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">06</span>
+              <div class="project-thumb">FF</div>
+              <div class="project-info">
+                <h3>FreeFlowLancer</h3>
+                <p>
+                  An enterprise-style management application featuring Client,
+                  Project, and Task CRUD functionalities backed by secure
+                  identity user authentication.
+                </p>
+                <div class="tag-row">
+                  <span>ASP.NET Core MVC</span><span>PostgreSQL</span
+                  ><span>Entity Framework</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://student-freeflowlancer-last-2-e3c7.classdev.courses/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">07</span>
+              <div class="project-thumb">RD</div>
+              <div class="project-info">
+                <h3>Real Deal Real Estate Platform</h3>
+                <p>
+                  A full-stack real estate platform featuring a dynamic React
+                  frontend deployed on Vercel paired with a robust backend admin
+                  API on Render.
+                </p>
+                <div class="tag-row">
+                  <span>React</span><span>Vercel</span><span>Node.js API</span>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 12px;
+                  margin-top: auto;
+                  flex-wrap: wrap;
+                "
+              >
+                <a
+                  class="project-link"
+                  href="https://realdeal-frontend.vercel.app"
+                  target="_blank"
+                  rel="noopener"
+                  >Frontend (React) →</a
+                >
+                <a
+                  class="project-link"
+                  href="https://real-deal-admin.onrender.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Admin API →</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">08</span>
+              <div class="project-thumb">MS</div>
+              <div class="project-info">
+                <h3>Morse Sentence Symphony</h3>
+                <p>
+                  Type any sentence and hear it played back instantly as Morse
+                  code audio, with adjustable speed and pitch.
+                </p>
+                <div class="tag-row">
+                  <span>JavaScript</span><span>Web Audio API</span
+                  ><span>HTML/CSS</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://jursidahima.github.io/morse-symphony/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-card">
+              <span class="project-index">09</span>
+              <div class="project-thumb">BM</div>
+              <div class="project-info">
+                <h3>Bad Motivation Generator</h3>
+                <p>
+                  A tongue-in-cheek generator that serves up deliberately
+                  terrible AI "advice," complete with shareable cards and a
+                  community hall of shame.
+                </p>
+                <div class="tag-row">
+                  <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                </div>
+              </div>
+              <a
+                class="project-link"
+                href="https://jursidahima.github.io/Bad-Motivation-Generator/"
+                target="_blank"
+                rel="noopener"
+                >View Project →</a
+              >
+            </div>
+
+            <div class="project-soon">
+              <span class="plus">+</span><span>Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">Curator's note</span>
+            <h2>About</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-image-wrap" data-reveal>
+              <div class="about-image-splash" aria-hidden="true"></div>
+              <div class="about-image-frame">
+                <img
+                  src="assets/images/profile.jpg"
+                  alt="Jursida Hima"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: inherit;
+                  "
+                />
+              </div>
+            </div>
+            <div class="about-copy" data-reveal>
+              <p>
+                I'm a <strong>full-stack developer</strong> who works across the
+                entire product — from interface design down to the database.
+                Most of what I build starts as a "what if": what if getting
+                dressed came with a weather forecast, what if a scheduling
+                headache could just disappear. I follow those questions all the
+                way to a finished, production-ready build.
+              </p>
+              <p>
+                My background spans
+                <strong
+                  >front-end and back-end development, database design,
+                  application security, and full-stack project delivery</strong
+                >, paired with formal training in
+                <strong
+                  >interaction design, usability, and product management</strong
+                >
+                — so I design with the same rigor I code with. An application
+                should feel obvious to use before it feels impressive.
+              </p>
+              <p>
+                Outside of that I'm usually planning a hike or a trip, and yes,
+                a certain pink, paint-loving panther has appointed himself
+                creative director of this page.
+              </p>
+              <ul class="about-list">
+                <li>Full-Stack Web Development</li>
+                <li>Interaction &amp; UX Design</li>
+                <li>Database Design</li>
+                <li>Security &amp; Usability</li>
+                <li>Product Management</li>
+                <li>Professional Practice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">Inquiries</span>
+            <h2>Have a project in mind? Let's build it.</h2>
+          </div>
+          <div class="contact-grid" data-reveal>
+            <div>
+              <div class="contact-links">
+                <a href="mailto:jursidahima@gmail.com"
+                  >✉ jursidahima@gmail.com</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/jursida-hima-0a38a23a5/"
+                  target="_blank"
+                  rel="noopener"
+                  >in LinkedIn</a
+                >
+                <a
+                  href="https://github.com/JursidaHima"
+                  target="_blank"
+                  rel="noopener"
+                  >⌥ GitHub</a
+                >
+              </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="What are we building?"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary submit-btn">
+                Send Message
+              </button>
+              <span class="form-note" id="form-note"
+                >Message received — I'll get back to you soon.</span
+              >
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button id="back-to-top" aria-label="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+
+    <footer>
+      <div class="wrap">
+        <p class="footer-text">
+          © 2026 Jursida Hima — a touch of Pink Panther.
+        </p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-</main>
-
-<button id="back-to-top" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
-</button>
-
-<footer>
-  <div class="wrap">
-    <p class="footer-text">© 2026 Jursida Hima-a touch of Pink Panther.</p>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
