@@ -1,13 +1,10 @@
-/* ============================================================
-   PINK PANTHER PORTFOLIO — animations.css
-   PP character keyframes, paint effects, particles, transitions
-   ============================================================ */
+/* Pink Panther portofolio animations
+   */
 
-/* ── Pink Panther character states ── */
+/*  Pink Panther character states  */
 #pp-character { transform-origin: bottom center; }
 
-/* Idle: gentle bob (the pink glow that used to animate alongside this via
-   ppTailSway's drop-shadow has been removed per feedback) */
+/*  bobbing up and down */
 .pp-idle {
   animation: ppBob 2.8s ease-in-out infinite;
 }

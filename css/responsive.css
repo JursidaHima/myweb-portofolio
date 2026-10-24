@@ -1,9 +1,6 @@
-/* ============================================================
-   PINK PANTHER PORTFOLIO — responsive.css
-   Tablet (≤ 900px) and mobile (≤ 560px) breakpoints
-   ============================================================ */
+/*responsive */
 
-/* ── Tablet ── */
+/*  Tablet  */
 @media (max-width: 900px) {
 
   /* Nav */
@@ -84,7 +81,7 @@
   .project-soon { grid-template-columns: 36px 60px 1fr; }
 }
 
-/* ── Mobile ── */
+/*  Mobile  */
 @media (max-width: 560px) {
 
   .wrap { padding: 0 20px; }
