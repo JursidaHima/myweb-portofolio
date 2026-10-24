@@ -1055,19 +1055,6 @@ footer {
   color: #E0396B;
 }
 
-/* Featured project */
-.project-featured {
-  background: #FFF7FA;
-}
-
-.project-featured .project-thumb {
-  background: linear-gradient(135deg, #E0396B, #FF6B9D);
-}
-
-.project-featured .project-info h3 {
-  color: #E0396B;
-}
-
 /* Skip link */
 .skip-link {
   position: absolute;
